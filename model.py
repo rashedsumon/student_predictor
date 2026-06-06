@@ -39,7 +39,8 @@ def train_and_get_pipeline():
     ])
     
     # 6. Train-Test Split & Fit
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_test_split=0.2, random_state=42)
+    #  CORRECT
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     print("Training the AI model...")
     pipeline.fit(X_train, y_train)
